@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Filament\Pages\Tenancy;
+namespace App\Filament\App\Pages\Tenancy;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Pages\Tenancy\EditTenantProfile;
-use Illuminate\Database\Eloquent\Model;
 
 class EditTeamProfile extends EditTenantProfile
 {
