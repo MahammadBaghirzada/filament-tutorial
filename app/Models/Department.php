@@ -13,6 +13,7 @@ class Department extends Model
 
     protected $fillable = [
         'name',
+        'team_id'
     ];
 
     public function employees(): HasMany

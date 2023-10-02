@@ -48,6 +48,11 @@ class DepartmentResource extends Resource
             ->schema([
                 Forms\Components\Section::make('Department Details')
                     ->schema([
+                        Forms\Components\Select::make('team_id')
+                            ->relationship(name: 'team', titleAttribute: 'name')
+                            ->searchable()
+                            ->preload()
+                            ->live(),
                         Forms\Components\TextInput::make('name')
                             ->required()
                             ->maxLength(255),
