@@ -107,6 +107,12 @@ class EmployeeResource extends Resource
                             ->searchable()
                             ->preload()
                             ->required(),
+                        Forms\Components\Select::make('team_id')
+                            ->relationship(name: 'team', titleAttribute: 'name')
+                            ->searchable()
+                            ->preload()
+                            ->live()
+                            ->columnSpanFull(),
                     ])->columns(2),
                 Forms\Components\Section::make('User Name')
                     ->description('Put the user name details in.')
@@ -141,7 +147,6 @@ class EmployeeResource extends Resource
                             ->displayFormat('d/m/Y')
                             ->required(),
                     ])->columns(2)
-
             ]);
     }
 
